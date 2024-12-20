@@ -9,7 +9,7 @@ const greatVibes = Great_Vibes({
 });
 
 export const metadata: Metadata = {
-  title: 'Boda de Juan & María',
+  title: 'Boda de Militza & Sebastian',
   description: 'Te invitamos a celebrar nuestra boda',
 };
 
