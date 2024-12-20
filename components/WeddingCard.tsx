@@ -13,7 +13,7 @@ export default function WeddingCard() {
   return (
     <Card 
       className="
-        mx-auto bg-white/95 p-3 sm:p-4 md:p-6 lg:p-8 
+        mx-auto bg-white/95 p-3 sm:p-0 md:p-6 lg:p-8 
         space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8 
         w-full max-w-full shadow-xl border-2 border-rose-100 
         backdrop-blur-sm overflow-hidden
