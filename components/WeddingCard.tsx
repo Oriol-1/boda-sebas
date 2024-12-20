@@ -13,26 +13,26 @@ export default function WeddingCard() {
   return (
     <Card 
     className="
-      w-full max-w-full 
-      mx-0 sm:mx-auto 
-      bg-white/95 p-3 sm:p-0 md:p-6 lg:p-8 
+      w-full 
+      bg-white/95 p-3 sm:p-0 md:p-2 lg:p-4 
       space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8
       shadow-xl border-2 border-rose-100 
-      backdrop-blur-sm overflow-hidden
+      backdrop-blur-sm
     "
   >
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-center space-y-2 sm:space-y-3 md:space-y-4"
-      >
+ <motion.div
+  initial={{ scale: 0.95, opacity: 0 }}
+  animate={{ scale: 1, opacity: 1 }}
+  transition={{ duration: 0.5 }}
+  className="relative w-full mx-0 sm:mx-auto sm:max-w-4xl"
+>
         <Heart className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 mx-auto text-rose-500 animate-pulse" />
         <div className="relative">
           <h1 
             className="
               font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl 
-              text-gray-800 tracking-wide leading-relaxed
+              text-gray-800 tracking-wide leading-relaxed font-bold
+              text-center
             "
           >
             Militza & Sebastian
@@ -40,7 +40,7 @@ export default function WeddingCard() {
           <div className="absolute -top-4 -left-2 w-full h-full border-t-2 border-rose-200 opacity-30" />
           <div className="absolute -bottom-4 -right-2 w-full h-full border-b-2 border-rose-200 opacity-30" />
         </div>
-        <p className="text-sm sm:text-base md:text-lg text-gray-600 font-light px-2 italic">
+        <p className="text-sm sm:text-base md:text-lg text-gray-600 font-light px-2 italic text-center">
           Nos complace invitarte a celebrar nuestra boda
         </p>
       </motion.div>

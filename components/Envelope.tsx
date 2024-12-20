@@ -9,13 +9,13 @@ interface EnvelopeProps {
 
 export default function Envelope({ children, isOpen }: EnvelopeProps) {
   return (
-    <div className="relative w-full min-h-screen flex justify-center items-center p-4">
-      <div className="relative w-full max-w-[800px] mx-auto">
+    <div className="relative w-full min-h-screen flex justify-center items-center p-1">
+      <div className="relative w-full max-w-[900px] mx-auto">
         {/* Cuerpo del sobre sin animaciones */}
         <div className="relative w-full aspect-[8/5] bg-amber-100 border-2 border-amber-200 rounded-lg overflow-hidden">
           {/* Solapa superior estática (sin movimiento) */}
           <div
-            className="absolute -top-[30%] left-0 right-0 h-[30%] origin-bottom bg-amber-50 border-2 border-amber-200"
+            className="absolute -top-[0%] left-0 right-0 h-[10%] origin-bottom bg-amber-50 border-2 border-amber-200"
             style={{
               transformStyle: "preserve-3d",
               backfaceVisibility: "hidden",
@@ -47,7 +47,7 @@ export default function Envelope({ children, isOpen }: EnvelopeProps) {
         <motion.div
           initial={{ y: 0, opacity: 1 }}
           animate={{ 
-            y: isOpen ? `-15%` : 0,
+            y: isOpen ? `3%` : 0,
             opacity: 1
           }}
           transition={{ 
@@ -57,7 +57,12 @@ export default function Envelope({ children, isOpen }: EnvelopeProps) {
           }}
           className="absolute inset-0 flex justify-center items-center p-4 sm:p-6"
         >
-          <div className="bg-white rounded-lg shadow-xl w-full max-w-[90%] max-h-[80%] flex items-center justify-center">
+         <div className="
+  bg-white rounded-lg shadow-xl w-full 
+  max-w-full max-h-full
+  md:max-w-[80%] md:max-h-[80%]
+  flex items-center justify-center
+">
             {children}
           </div>
         </motion.div>
