@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3')] bg-cover bg-center bg-fixed">
-      <div className="min-h-screen bg-black/40 backdrop-blur-sm flex items-center justify-center p-8">
+      <div className="min-h-screen bg-black/40 backdrop-blur-sm flex items-center justify-center ">
         <Envelope isOpen={isOpen}>
           <WeddingCard />
         </Envelope>

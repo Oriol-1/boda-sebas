@@ -12,13 +12,15 @@ export default function WeddingCard() {
 
   return (
     <Card 
-      className="
-        mx-auto bg-white/95 p-3 sm:p-0 md:p-6 lg:p-8 
-        space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8 
-        w-full max-w-full shadow-xl border-2 border-rose-100 
-        backdrop-blur-sm overflow-hidden
-      "
-    >
+    className="
+      w-full max-w-full 
+      mx-0 sm:mx-auto 
+      bg-white/95 p-3 sm:p-0 md:p-6 lg:p-8 
+      space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8
+      shadow-xl border-2 border-rose-100 
+      backdrop-blur-sm overflow-hidden
+    "
+  >
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
