@@ -140,7 +140,8 @@ export default function WeddingCard() {
         }
         @media (max-width: 480px) {
           .mobile-container {
-            padding-top: 240%;  /* Añade espacio superior solo en móviles */
+            padding-top: 180%;  /* Añade espacio superior solo en móviles */
+          
           }
         }
       
