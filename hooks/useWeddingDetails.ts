@@ -28,13 +28,13 @@ export function useWeddingDetails() {
       endDate = new Date(civilWeddingDate);
       endDate.setHours(startDate.getHours() + 2);  // Duración estimada de 2 horas
       location = civilLocation;
-      eventText = "Ceremonia de boda de Militza & Sebastián";
+      eventText = "Ceremonia de boda de Militza & Sebastian";
     } else {
       startDate = new Date(reservationDate);
       endDate = new Date(reservationDate);
       endDate.setHours(startDate.getHours() + 3);  // Termina a las 23:00
       location = restaurantLocation;
-      eventText = "Cena de celebración - Militza & Sebastián";
+      eventText = "Cena de celebración - Militza & Sebastian";
     }
 
     // Formato correcto para Google Calendar
