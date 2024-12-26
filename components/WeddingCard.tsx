@@ -50,7 +50,7 @@ export default function WeddingCard() {
           className="text-center bg-rose-50/70 p-4 sm:p-6 rounded-lg border-l-4 border-rose-300 shadow-md mx-4 sm:mx-0 flex-shrink-0"
         >
           <p className="text-gray-700 text-sm sm:text-base">
-            La boda civil tendrá lugar el <strong>11 de abril de 2025</strong>  
+            La boda civil tendrá lugar el <strong>11 de abril de 2025 </strong>  
             en el <strong>{civilLocation}</strong> a las <strong>19:00 h</strong>.
           </p>
           <Button 
@@ -63,6 +63,18 @@ export default function WeddingCard() {
             Ver Ubicación de la Ceremonia
           </Button>
         </motion.div>
+
+        {/* Separador para el banquete */}
+        <div className="text-center mt-8 mb-6">
+          <p className="text-rose-500 text-xl sm:text-2xl font-semibold leading-relaxed">
+            ¡Seguimos de fiesta!
+          </p>
+          <p className="text-gray-700 text-lg sm:text-xl">
+            El día <strong>12 de abril</strong> te esperamos en la cena y banquete
+            <br />
+            a las <strong>20:00 h</strong>.
+          </p>
+        </div>
 
         {/* Información del Restaurante */}
         <motion.div 
@@ -98,7 +110,7 @@ export default function WeddingCard() {
           {/* Imagen de los novios */}
           <div className="relative w-full mx-auto rounded-lg overflow-hidden">
             <Image
-              src="/images/sebas-3.png"
+              src="/images/sebas-4.png"
               alt="Imagen de los novios"
               width={500}
               height={350}
@@ -115,12 +127,15 @@ export default function WeddingCard() {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="flex flex-col sm:flex-row justify-center items-center gap-4 p-4 pt-6 flex-shrink-0"
         >
-          <Button 
-            onClick={handleWhatsAppConfirm}
-            className="w-full sm:w-auto bg-rose-500 text-white py-3 px-6 rounded-lg"
-          >
-            Confirmar Asistencia
-          </Button>
+       <Button 
+  onClick={handleWhatsAppConfirm}
+  className="
+    w-full sm:w-auto bg-rose-500 text-white py-3 px-6 rounded-lg 
+    hover:bg-rose-600 active:bg-rose-700
+  "
+>
+  Confirmar Asistencia
+</Button>
           <Button 
             variant="outline" 
             onClick={() => handleAddToCalendar("restaurant")}
@@ -132,19 +147,41 @@ export default function WeddingCard() {
       </Card>
 
       <style jsx>{`
-      
+
+      @media (max-width: 1500px) {
+          .mobile-container {
+            padding-top: 50%;
+          }
+        }
+
+       @media (max-width: 1400px) {
+          .mobile-container {
+            padding-top: 50%;
+          }
+        }
+        @media (max-width: 1019px) {
+          .mobile-container {
+            padding-top: 90%;
+          }
+        }
+
+      @media (max-width: 754px) {
+          .mobile-container {
+            padding-top: 50%;
+          }
+        }
+
+
         @media (max-width: 640px) {
           .mobile-container {
-            padding-top: 120%;  /* Añade espacio superior solo en móviles */
+            padding-top: 170%;
           }
         }
         @media (max-width: 480px) {
           .mobile-container {
-            padding-top: 180%;  /* Añade espacio superior solo en móviles */
-          
+            padding-top: 180%;
           }
         }
-      
       `}</style>
     </div>
   );
