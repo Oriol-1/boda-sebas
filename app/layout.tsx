@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import './globals.css';
 import type { Metadata } from 'next';
 import { Great_Vibes } from 'next/font/google';
@@ -26,6 +27,7 @@ export default function RootLayout({
     <html lang="es">
       <head />
       <body className={`${greatVibes.variable} font-sans`}>{children}</body>
+      <Analytics />
     </html>
   );
 }
